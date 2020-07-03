@@ -1,18 +1,22 @@
 <div class="container">
   <div class="columns is-centered">
     <div class="box column is-one-third">
-      <h1 class="title has-text-centered">Password Generator</h1>
-
+      <h1 class="title has-text-centered">Generador de Password</h1>
+      <p class="text-centered">
+        Este es una pequena app para que generes una contrasena segura para que
+        asi Mr. Robot no te puede hackear.
+      </p>
+      <br />
       <div class="field">
-        <label>Length</label>
+        <label>Longitud</label>
         <input class="input" (input)="onChangeLength($event.target.value)" />
       </div>
-
+      <p>Que contenga:</p>
       <div class="field">
         <div class="control">
           <label class="checkbox">
             <input (change)="onChangeUseLetters()" type="checkbox" />
-            Use Letters
+            Letras
           </label>
         </div>
       </div>
@@ -21,7 +25,7 @@
         <div class="control">
           <label class="checkbox">
             <input (change)="onChangeUseNumbers()" type="checkbox" />
-            Use Numbers
+            Numeros
           </label>
         </div>
       </div>
@@ -30,7 +34,7 @@
         <div class="control">
           <label class="checkbox">
             <input (change)="onChangeUseSymbols()" type="checkbox" />
-            Use Symbols
+            Simbolos
           </label>
         </div>
       </div>
@@ -42,11 +46,11 @@
         (click)="onButtonClick()"
         class="button is-link is-fullwidth"
       >
-        Generate!
+        Generar!
       </button>
 
       <div class="box" *ngIf="password">
-        <label>Your Password</label>
+        <label>Tu Contrasena</label>
         <input class="input" [value]="password" />
       </div>
     </div>
